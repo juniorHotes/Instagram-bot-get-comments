@@ -1,0 +1,14 @@
+{
+  "name": "instagram-bot-get-comments",
+  "version": "1.0.0",
+  "description": "Ler comentários do instagram",
+  "main": "App.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "JuniorHotes",
+  "license": "ISC",
+  "dependencies": {
+    "puppeteer": "^5.4.1"
+  }
+}
