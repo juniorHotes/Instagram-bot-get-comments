@@ -1,0 +1,22 @@
+<%- include('partials/doc_top.ejs') %>
+
+<body>
+<%- include('partials/header.ejs') %>
+
+<div class="container">
+    <form action="/profile" method="post">
+        <label for="username">Informe seu nome de usuário</label>
+        <input type="text" id="username" name="username" value="" placeholder="seunome">
+        <input class="btn btn-tomato btn-hover" type="submit" value="Prosseguir">
+        <% if(userNotFound) { %>
+            <h3><span>Usuário não encontrado!</span></h3>
+        <% } %>
+        <% if(isPrivate) { %>
+            <h3><span>Sua conta precisa ser pública!</span></h3>
+        <% } %>
+    </form>
+</div>
+
+</body>
+
+<%- include('partials/doc_base.ejs') %>

@@ -1,0 +1,42 @@
+<%- include('../partials/doc_top.ejs') %>
+
+<body>
+<%- include('../partials/header.ejs') %>
+
+<div class="container">
+    <h1>Realizar sorteio</h1>
+    <div class="container-comments">
+        <% comments.forEach((comment, index ) => { %>
+            <p><span><%= index + 1 %></span><%= comment %></p>
+        <% }) %>
+    </div>
+    <button class="btn btn-green btn-hover" onclick="draw()">Sortear</button>
+
+    <div class="container-winners">
+    </div>
+</div>
+<script>
+    async function draw() {
+        const comments = await document.querySelectorAll('.container-comments p');
+        const winner = async (w) => {
+            await Math.floor(Math.random() * comments.length) + 1;
+            
+        } 
+
+        // comments[random].click()
+        comments[random].style.background = await '#8fbc8f';
+
+        const winners = document.querySelector('.container-winners')
+        winners.innerHTML += `       
+        <div class="winner">
+            <img src="" alt="Photo winner">
+            <h3>${comments[random]}</h3>
+        </div>`;
+
+        console.log(random);
+        console.log(comments);
+    }
+</script>
+</body>
+
+<%- include('../partials/doc_base.ejs') %>

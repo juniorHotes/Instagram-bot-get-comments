@@ -1,0 +1,43 @@
+<%- include('../partials/doc_top.ejs') %>
+
+<body>
+<%- include('../partials/header.ejs') %>
+
+<div class="container">
+    <div class="container-profile">
+        <a href="https://www.instagram.com/<%= userName %>" target="_blanck">
+            <div class="profile"><img width="100px" src="<%= profileElement %>" alt="Profile"></div>
+            <h3><%= userName %></h3>
+        </a>
+    </div>
+    <label for="url">Informe a URL da postagem</label>
+    <input type="url" id="url" name="url" value="" placeholder="COLE A URL AQUI!">
+    <a href="" class="btn btn-blue btn-hover">Proseguir</a>
+    <hr>
+    <h4 
+        style="text-align: center; padding: 10px 0;">
+        Ou utilize uma de suas postagens
+    </h4>
+    <hr>
+    <div class="container-posts"><%- postsElement %></div>
+
+</div>
+<script>
+    const $ = document.querySelector.bind(document);
+
+    $('input[type=url]').addEventListener('change', function(e) {
+        const isValidURL = e.target.value.search('https://www.instagram.com/p/');
+
+        if(isValidURL == 0) {
+            const link = e.target.value.split('.com')[1];
+            $('a.btn').setAttribute('href', link);
+        } else if(isValidURL == -1) {
+            alert("Forneça um link válido do instagram.\nO link deve ser da postagem feita no instagram");
+            e.target.value = "";
+            e.focus();
+        }
+    });
+</script>
+</body>
+
+<%- include('../partials/doc_base.ejs') %>
