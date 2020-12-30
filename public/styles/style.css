@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+body {
+    background-color: whitesmoke;
+}
+header {
+    width: 100%;
+    height: 70px;
+    padding: 12px 20%;
+    background-color: crimson;
+}
+header a {
+    text-decoration: none;
+}
+header a h1 {
+    color: white;
+    line-height: 45px;
+}
+.container {
+    width: 60%;
+    min-width: 400px;
+    padding: 30px;
+    height: 80vh;
+    margin: 10px auto;
+    background-color: white;
+    border: 1px solid #999;
+}
+form {
+    width: 100%;
+    margin: 0 auto;
+}
+label {
+    font-size: 24px;
+}
+input[type=url], input[type=text] {
+    width: 100%;
+    margin-bottom: 6px;
+    font-size: 24px;
+    padding: 16px 12px;
+    border: 1px solid gray;
+    background-color: aliceblue;
+}
+.btn {
+    width: 100%;
+    margin: 10px 0; 
+    border: none;
+    padding: 16px 20px;
+    font-size: 24px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+}
+.btn.btn-blue {
+    background-color: steelblue;
+}
+.btn.btn-tomato {
+    background-color: tomato;
+}
+.btn.btn-green {
+    background-color: forestgreen;
+}
+.btn.btn-hover:hover {
+    filter: brightness(0.8);
+}
+h3 span {
+    display: block;
+    color: red;
+    padding: 10px;
+    margin-top: 8px;
+    background-color: rgba(255, 0, 0, 0.3);
+    text-align: center;
+}
+.container-comments {
+    width: 100%;
+    height: 250px;
+    border: 1px solid #888;
+    contain: content;
+    overflow-y: auto;
+    padding: 5px;
+    flex-wrap: nowrap;
+}
+.container-comments p:nth-child(even) {
+    background-color: #f2f2f2;
+}
+.container-comments p span {
+    padding: 4px;
+}
+.container-profile {
+    margin-bottom: 20px;
+}
+.container-profile a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+}
+.profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    border: 5px solid crimson;
+    border-radius: 50%;
+}
+.profile img {
+    width: 80px;
+    border-radius: 50%;
+}
